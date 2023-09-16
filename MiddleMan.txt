@@ -1,0 +1,21 @@
+<!--#include file="aspJSON.asp" -->
+
+
+
+Set json = New aspJSON
+
+Script("Name") = "MiddleMan"
+Script("Author") = "Dommz"
+Script("Major") = 2
+Script("Minor") = 7
+Script("Revision") = 0
+Script("Description") = "Serialises data from python to vbs so python can interact with SB"
+
+json.loadJSON Serial
+
+
+Errormsg = json.data("error_message")
+
+AddChat vbRed,Errormsg
+
+
